@@ -28,7 +28,7 @@ void conventional(int dim, int A[dim][dim], int B[dim][dim]) {
 				//printf("Adding %i\n",A[i][0] * B[0][j] + A[i][1] * B[1][j] + A[i][2] * B[c][2]);
             }
 
-            printf("total is %i\n",final[i][j]);
+            printf("%d\n",final[i][j]);
         }
     }
 
