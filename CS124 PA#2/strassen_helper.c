@@ -21,21 +21,14 @@ void conventional(int dim, int A[dim][dim], int B[dim][dim]) {
         for (int j=0; j<dim; j++){
             int counter = 0;
             for (int c=0; c<dim; c++){
-                // printf("%d\n",final[i][j]);
-                //printf("%i * %i\n",A[i][c],B[c][j]);
                 counter += A[i][c] * B[c][j];
                 final[i][j] = counter;
-				//printf("Adding %i\n",A[i][0] * B[0][j] + A[i][1] * B[1][j] + A[i][2] * B[c][2]);
             }
-
             printf("%d\n",final[i][j]);
         }
     }
-
-	for(int a = 0; a < dim; a++) {
-		for(int b = 0; b < dim; b++) {
-			//printf("%d\n",final[a][b]);
-		}
-	}
 }
-void strassen() {}
+
+void strassen(int dim, int A[dim][dim], int B[dim][dim]) {
+    
+}
