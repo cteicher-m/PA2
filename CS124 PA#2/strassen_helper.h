@@ -10,5 +10,7 @@
 
 // prototypes
 int padding(int dim);
-void conventional(int dim, int A[dim][dim], int B[dim][dim]);
+int[dim][dim] conventional(int dim, int A[dim][dim], int B[dim][dim]);
 void strassen(int dim, int A[dim][dim], int B[dim][dim]);
+int[dim][dim] plus(int A[dim][dim], int B[dim][dim]);
+int[dim][dim] minus(int A[dim][dim], int B[dim][dim]);
