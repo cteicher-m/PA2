@@ -16,7 +16,6 @@ int flag, dim;
 FILE *file; 
 
 int main(int argc, char* argv[]) {
-
     if (argc != 4) {
 		printf("Usage: ./strassen flag dimension inputfile \n");
 		return 0;
@@ -25,14 +24,6 @@ int main(int argc, char* argv[]) {
         dim = atoi(argv[2]);
         file = fopen(argv[3], "r");
     }
-
-
-    // FILE *newfile = fopen("mock2.txt", "w");
-
-    // for (int i=0;i<2*pow(10,2);i++){
-    //     fprintf(newfile, "%d\n",rand());
-    // }
-
 
     int final_dim = padding(dim);
 	int A[final_dim][final_dim];
@@ -63,13 +54,16 @@ int main(int argc, char* argv[]) {
 				}
 			}
 		}
+   		strassen(final_dim,A,B,final);
+   		
+   		// print diagnols of final matrix
+  		for (int i=0;i<dim;i++){
+    		for (int j=0;j<dim;j++){
+      			if (i==j){
+       	 			printf("%d\n",final[i][j]);
+      	}
     }
-   	
+  }
+    }  	
    	fclose(file);
-
-    //conventional(final_dim,A,B,final);
-    strassen(final_dim,A,B,final);
-
-    // Use conventional and strassens algorithm 
-	// Print out results 
 }
