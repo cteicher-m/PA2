@@ -7,10 +7,10 @@
    ***************************************************************************/
 
 // definitions
-
+#define CROSSOVER 2
 // prototypes
 int padding(int dim);
-int[dim][dim] conventional(int dim, int A[dim][dim], int B[dim][dim]);
-void strassen(int dim, int A[dim][dim], int B[dim][dim]);
-int[dim][dim] plus(int A[dim][dim], int B[dim][dim]);
-int[dim][dim] minus(int A[dim][dim], int B[dim][dim]);
+void conventional(int dim, int A[dim][dim], int B[dim][dim],int final[dim][dim]);
+void strassen(int dim, int A[dim][dim], int B[dim][dim], int final[dim][dim]);
+void plus(int dim, int A[dim][dim], int B[dim][dim], int final[dim][dim]);
+void minus(int dim, int A[dim][dim], int B[dim][dim], int final[dim][dim]);

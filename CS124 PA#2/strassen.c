@@ -28,6 +28,7 @@ int main(int argc, char* argv[]) {
     int final_dim = padding(dim);
 	int A[final_dim][final_dim];
 	int B[final_dim][final_dim];
+    int final[final_dim][final_dim];
 
     if (file == NULL) {
         fprintf(stderr, "can't open %s\n", argv[3]);
@@ -57,7 +58,8 @@ int main(int argc, char* argv[]) {
    	
    	fclose(file);
 
-    conventional(final_dim,A,B);
+    //conventional(final_dim,A,B,final);
+    strassen(final_dim,A,B,final);
 
     // Use conventional and strassens algorithm 
 	// Print out results 
