@@ -7,11 +7,12 @@
    ***************************************************************************/
 
 // definitions
-#define CROSSOVER 2
+#define CROSSOVER 90
    
 // prototypes
 int padding(int dim);
-void conventional(int dim, int A[dim][dim], int B[dim][dim], int final[dim][dim]);
-void strassen(int dim, int A[dim][dim], int B[dim][dim], int final[dim][dim]);
-void plus(int dim, int A[dim][dim], int B[dim][dim], int final[dim][dim]);
-void minus(int dim, int A[dim][dim], int B[dim][dim], int final[dim][dim]);
+void conventional(int dim, int** A, int** B, int** final);
+void strassen(int dim, int** A, int** B, int** final, int crossover);
+void plus(int dim, int** A, int** B, int** final);
+void minus(int dim, int** A, int** B, int** final);
+int** makeMatrix(int dim);
