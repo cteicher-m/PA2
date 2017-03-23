@@ -56,7 +56,7 @@ int main(int argc, char* argv[]) {
 		}
    		strassen(final_dim,A,B,final);
    		
-   		// print diagnols of final matrix
+   		// print diagonals of final matrix
   		for (int i=0;i<dim;i++){
     		for (int j=0;j<dim;j++){
       			if (i==j){
@@ -64,6 +64,15 @@ int main(int argc, char* argv[]) {
       	}
     }
   }
-    }  	
+}  	
    	fclose(file);
+    int randomnumber;
+
+    FILE *newfile = fopen("mock256.txt", "w");
+    for (int i=0;i<2*pow(256,2);i++){
+        randomnumber = rand() % 2;
+        fprintf(newfile,"%d\n",randomnumber);
+    }
+
+    fclose(newfile);
 }
